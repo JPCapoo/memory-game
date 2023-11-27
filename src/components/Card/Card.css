@@ -1,0 +1,51 @@
+.card {
+  height: 200px;
+  width: 150px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 100px;
+    width: 70px;
+  }
+}
+
+.card--flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+  background: rgb(83, 101, 136);
+  background: linear-gradient(
+    138deg,
+    rgba(83, 101, 136, 1) 45%,
+    rgba(97, 218, 251, 1) 100%
+  );
+}
+
+.card--flipped h3 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 0 0 10px black;
+  transform: scaleX(-1);
+}
+
+.card--covered {
+  transform: rotateY(10deg);
+  transition: transform 0.5s;
+}
+
+.card--covered img {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  margin: 0 auto;
+}
